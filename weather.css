@@ -1,0 +1,32 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+.current {
+    display: flex;
+    width: 500px;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px 0 20px 0;
+    font-size: 18px;
+}
+
+.weather-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub1 p, .sub2 p {
+    line-height: 1.5em;
+}
+
+
