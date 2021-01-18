@@ -1,5 +1,5 @@
 const API_KEY = 'key=434d0e58097f424f9ed234609211401&q=';
-const URL = 'http://api.weatherapi.com/v1/';
+const URL = 'https://api.weatherapi.com/v1/';
 const current = 'current.json?';
 const forecast = 'forecast.json?';
 const form = document.getElementById('form');
