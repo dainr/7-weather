@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7-Weather</title>
+    <script src="https://kit.fontawesome.com/04b83dcd2f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <header>
-        <h1>Weather</h1>
-    </header>
-    <main>
 
-        <form action="#" method="#" id="form">
-            <input type="text" id="city" name="city" placeholder="enter city or zip code...">
-            <button type="submit">Fetch Weather</button>
-        </form>
-
-        <div class="current">
-            <div class="sub1"></div>
-            <div class="sub2"></div>
+      
+        
+        <div class="container">
+            <form action="#" method="#" id="form">
+                <input type="text" id="city" name="city" placeholder="City...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <p class="location-element"></p>
+            <div class="current-weather">
+                <div class="sub1"></div>
+                <div class="sub2"></div>
+            </div>
+            <div class="forecast"></div>
         </div>
-    </main>
 
     <footer></footer>
 

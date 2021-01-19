@@ -29,12 +29,16 @@ function getDate() {
 function displayWeatherInfo(data) {
     const sub1 = document.querySelector('.sub1');
     const sub2 = document.querySelector('.sub2');
+    const locationElement = document.querySelector('.location-element');
+
+    locationElement.innerHTML = `${data.location.name}, ${data.location.region} <br/> ${getDate()}`;
+
+    //<p>${data.location.name}, ${data.location.region}</p>
 
     sub1.innerHTML = `
-    <p>${data.location.name}, ${data.location.region}</p>
-    <p>${getDate()}</p>
-    <div class='weather-data'><img src='${data.current.condition.icon}' class='weather-con'/> <p>${data.current.condition.text}</p></div>
-    <p><span>F:${data.current.temp_f}</span> | <span>C:${data.current.temp_c}</span></p>
+    <p class="temp_f"><span>${data.current.temp_f}F</span></p>
+    <div class='weather-data'><img src='${data.current.condition.icon}' class='weather-icon'/> <p>${data.current.condition.text}</p></div>
+    
     `;
 
     sub2.innerHTML = `
@@ -60,9 +64,9 @@ form.addEventListener('submit', (e) => {
 });
 
 function getCurrentData(city) {
-    fetch(URL + current + API_KEY + city).then((response) => {
-        return response.json();
+    fetch(URL + current + API_KEY + city).then((response) => {return response.json();
     }).then((data) => {
+        //console.log(data);
         displayWeatherInfo(data);
     }).catch((error) => {
         console.error(error);
